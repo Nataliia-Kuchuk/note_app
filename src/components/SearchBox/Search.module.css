@@ -1,0 +1,10 @@
+.search_input{
+   
+    border-radius: 10px;
+    border: none;
+    padding: 20px 30px;
+      max-width: 300px;
+}
+.container{
+      max-width: 300px;
+}

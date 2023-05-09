@@ -1,0 +1,12 @@
+.item {
+  flex-grow: 0.1;
+  height: 100px;
+ padding: 10px 15px;
+  border: 1px solid rgb(222, 222, 240);
+  word-break: break-all;
+  line-height: 2;
+
+}
+.active {
+  background-color: rgb(169, 169, 227);
+}

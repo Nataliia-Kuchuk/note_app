@@ -1,0 +1,6 @@
+.container{
+    height: 100vh;
+   overflow: auto;
+   flex-grow: 0.2;
+    max-width: 250px;
+}

@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { useContext } from "react";
+import "./App.css";
+import Header from "./components/Header/Header";
+import Sidebar from "./components/Sidebar/Sidebar";
+import WorkSpace from "./components/WorkSpace/WorkSpace";
+import { Context } from "./contex/Contex";
+
 
 function App() {
+  const { DB } = useContext(Context);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <div style={{ display: "flex" }}>
+        <Sidebar />
+        {DB.length ? <WorkSpace /> : null}
+      </div>
     </div>
   );
 }
