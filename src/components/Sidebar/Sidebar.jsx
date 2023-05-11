@@ -1,17 +1,17 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { Context } from '../../contex/Contex';
 import ListItem from '../ListItem/ListItem';
 import styles from './Sidebar.module.css'
 const Sidebar = () => {
-      const { data, setData, DB } = useContext(Context);
+      const { data, filtredArray } = useContext(Context);
   
 
 console.log(data)
     return (
       <div className={styles.container}>
-         {DB.map((item) => (
+        {filtredArray?.map((item) => (
           <ListItem key={item.id} item={item} />
-        ))} 
+        ))}
       </div>
     );
 };

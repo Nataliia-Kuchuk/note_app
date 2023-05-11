@@ -6,17 +6,17 @@ import { Context } from "../../contex/Contex";
 
 function WorkSpace() {
   const { editorState, handleChange, DB, active } = useContext(Context);
-
+  console.log(active)
   return (
     <div className="date">
       {DB.filter((item) => item.id === active).map((item) => {
-        return <div>{item.date}</div>
+        return <div>{item.date}</div>;
       })}
-      <Editor
-      
-        editorState={editorState}
-        onChange={handleChange}
-      />
+      {active ? (
+        <Editor editorState={editorState} onChange={handleChange} />
+      ) : (
+        <div className="edit">Choose note  to edit</div>
+      )}
     </div>
   );
 }

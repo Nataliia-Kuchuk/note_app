@@ -3,4 +3,5 @@
    overflow: auto;
    flex-grow: 0.2;
     max-width: 250px;
+    width: 40%;
 }

@@ -4,16 +4,35 @@
     margin: 0;
     background-color: rgb(205, 205, 240);
     padding: 20px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
 }
 .btn{
     border: none;
     border-radius: 2px;
     margin: 10px;
- 
   
 }
 .btn_img{
   width: 30px;
     height: 25px;
     padding: 5px;
+}
+@media (max-width: 550px) {
+   .container{
+   
+    padding: 10px 20px;
+   
+}
+.btn_img{
+  width: 20px;
+    height: 20px;
+    padding: 5px;
+}
+.btn{
+    margin: 5px;
+  
+}
 }

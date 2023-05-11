@@ -3,10 +3,8 @@ import styles from "./ListItem.module.css";
 import { Context } from "../../contex/Contex";
 
 const ListItem = ({ item }) => {
-  const { openEditor, editorState, active } = useContext(Context);
-  // const truncatedArray = item.value.map((element) => {
-  //   return element.length > 30 ? element.slice(0, 30) + "..." : element;
-  // });
+  const { openEditor, active } = useContext(Context);
+ 
   console.log(item.value)
   return (
     <div
@@ -15,8 +13,8 @@ const ListItem = ({ item }) => {
       }`}
       onClick={() => openEditor(item.id)}
     >
-     {item.value}
-      {item.date}
+      {item.value}
+      <div className={styles.date}>{item.date}</div>
     </div>
   );
 };
